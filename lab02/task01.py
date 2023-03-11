@@ -26,4 +26,4 @@ weatherData = json.loads(response.text)
 #print(weatherData['main']['temp_max']) 
 
 st.header("Weather forecast")
-st.text(weatherData['main']['temp_max'])
+st.text("Temperature in Bolzano: " + weatherData['main']['temp_max'] + " °C")

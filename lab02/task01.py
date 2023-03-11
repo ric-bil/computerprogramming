@@ -3,6 +3,7 @@ import streamlit as st
 
 #add your own APIkey
 APIkey = '51f0821c87571383249cff5f9a44fe1d'
+location = 'Bolzano'
 
 #check API documentation to see what structure of URL is needed to access the data
 #http://api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}

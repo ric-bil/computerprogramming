@@ -25,4 +25,4 @@ if location:
     #from pprint import pprint 
 
     st.header("Weather forecast")
-    st.text(weatherData['main']['temp_max'])
+    st.write("Temperature in Bolzano: ", weatherData['main']['temp_max'], " °C" )

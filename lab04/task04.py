@@ -18,7 +18,7 @@ if option:
     else:
         choosen_option = None
 
-if choosen_option & keyword:
+if (choosen_option & keyword):
     url= 'https://api.datamuse.com/words?' + choosen_option + '=' + keyword
 
     # Download the JSON data from Datamuse's API.

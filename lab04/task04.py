@@ -27,8 +27,7 @@ if (choosen_option and keyword):
     #Load JSON data into a Python variable.
     responseData = json.loads(response.text)
     # Uncomment to see the raw JSON text:
-    #print(weatherData) 
-    from pprint import pprint 
-
+    st.write(responseData)
+    
 #    st.header("Weather forecast")
 #    st.write("Temperature: ", weatherData['main']['temp_max'], " °C" )

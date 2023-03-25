@@ -28,5 +28,3 @@ if (choosen_option and keyword):
     responseData = json.loads(response.text)
     # Uncomment to see the raw JSON text:
     st.write(responseData)
-    #st.write("Responses: " + responseData[0]['word'] + ", ", responseData[1]['word'] + ", ", responseData[2]['word'] + ", ", responseData[3]['word'])
-

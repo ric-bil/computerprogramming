@@ -27,5 +27,6 @@ if (choosen_option and keyword):
     #Load JSON data into a Python variable.
     responseData = json.loads(response.text)
     # Uncomment to see the raw JSON text:
-    st.write("Responses: " + responseData[0]['word'] + ", ", responseData[1]['word'] + ", ", responseData[2]['word'] + ", ", responseData[3]['word'])
+    st.write(responseData)
+    #st.write("Responses: " + responseData[0]['word'] + ", ", responseData[1]['word'] + ", ", responseData[2]['word'] + ", ", responseData[3]['word'])
 

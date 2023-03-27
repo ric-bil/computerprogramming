@@ -9,4 +9,4 @@ translator = Translator()
 
 if (language and keyword):
     translate = translator.translate(keyword, dest=language) 
-    st.write(translate)
+    st.write(translate.Translated.text)

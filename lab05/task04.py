@@ -8,5 +8,5 @@ keyword = st.text_input('Insert a word or a sentence')
 
 
 if (language and keyword):
-    translate = translator.translate(keyword, dest=language) 
-    print(translate)
+    translate = translator.translate(keyword, dest='it') 
+

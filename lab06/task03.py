@@ -5,7 +5,7 @@ import streamlit as st
 
 
 translator = Translator()
-word = st.input("Please, insert a word/sentence\t")
+word = st.input("Please, insert a word/sentence")
 lang_code = st.input("Please, type a 2-letter language code, for the destination language ")
 translate = translator.translate(word, dest=lang_code) 
 tts1=gTTS(text=translate.text, lang=lang_code)

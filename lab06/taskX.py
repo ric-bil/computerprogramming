@@ -27,4 +27,4 @@ if uploaded_file is not None:
   sound = st.empty()
   sound.markdown(html_string, unsafe_allow_html=True)  # will display a st.audio with the sound you specified in the "src" of the html_string and autoplay it
   time.sleep(2)  # wait for 2 seconds to finish the playing of the audio
-  sound.empty()  # optionally delete the element afterwards
+  #sound.empty()  # optionally delete the element afterwards

@@ -2,7 +2,7 @@
 from gtts import gTTS
 from googletrans import Translator
 import streamlit as st
-import base64
+import time
 
 translator = Translator()
 lang_code = st.text_input("Please, type a 2-letter language code, for the destination language")
@@ -17,16 +17,14 @@ if uploaded_file is not None:
   
   
 
-  mymidia_placeholder = st.empty()
 
-  mymidia_str = "data:audio/ogg;base64,%s"%(base64.b64encode(audio_file).decode())
-  mymidia_html = """
-                <audio autoplay class="stAudio">
-                <source src="%s" type="audio/ogg">
-                Your browser does not support the audio element.
-                </audio>
-            """%mymidia_str
+  html_string = """
+            <audio controls autoplay>
+              <source src="file.mp3" type="audio/mp3">
+            </audio>
+            """
 
-  mymidia_placeholder.empty()
-  time.sleep(1)
-  mymidia_placeholder.markdown(mymidia_html, unsafe_allow_html=True)
+  sound = st.empty()
+  sound.markdown(html_string, unsafe_allow_html=True)  # will display a st.audio with the sound you specified in the "src" of the html_string and autoplay it
+  time.sleep(2)  # wait for 2 seconds to finish the playing of the audio
+  sound.empty()  # optionally delete the element afterwards

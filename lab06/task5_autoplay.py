@@ -29,27 +29,4 @@ if uploaded_file is not None:
   tts1=gTTS(text=translate.text, lang=lang_code)
   tts1.save('file.mp3')
 
-  audio_file = open("file.mp3", "rb")
-  
-  
-
-
-  #html_string = """
-  #          <audio controls autoplay>
-  #            <source src="./file.mp3" type="audio/mp3">
-  #          </audio>
-  #          """
-
-  #sound = st.empty()
-  #sound.markdown(html_string, unsafe_allow_html=True)  # will display a st.audio with the sound you specified in the "src" of the html_string and autoplay it
-  #time.sleep(2)  # wait for 2 seconds to finish the playing of the audio
-  #sound.empty()  # optionally delete the element afterwards
-  #st.write("# Auto-playing Audio!")
-
   autoplay_audio("file.mp3")
-  
-
-
-
-
-

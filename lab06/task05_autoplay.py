@@ -2,7 +2,6 @@
 from gtts import gTTS
 from googletrans import Translator
 import streamlit as st
-import time
 import base64
 
 def autoplay_audio(file_path: str):

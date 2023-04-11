@@ -20,7 +20,7 @@ if uploaded_file is not None:
 
   html_string = """
             <audio controls autoplay>
-              <source src="https://www.orangefreesounds.com/wp-content/uploads/2022/04/Small-bell-ringing-short-sound-effect.mp3" type="audio/mp3">
+              <source src="./file.mp3" type="audio/mp3">
             </audio>
             """
 

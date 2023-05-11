@@ -1,4 +1,5 @@
 import random
+from PIL import Image
 import streamlit as st
 
 items = ['to_eat', 'to_read', 'tree', 'apple']

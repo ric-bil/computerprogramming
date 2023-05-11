@@ -3,6 +3,8 @@ from PIL import Image
 import streamlit as st
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
+chosen_item = st.session_state.item
+st.write(chosen_item)
 rand_item = random.choice(items)
 
 st.session_state.play = 0 ######

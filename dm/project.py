@@ -3,9 +3,11 @@ from PIL import Image
 import streamlit as st
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
-chosen_item = st.session_state.item
-st.write(chosen_item)
-rand_item = random.choice(items)
+if 'item' not in st.session_state:
+    rand_item = random.choice(items)
+    st.session_state.item = rand_item
+else
+  rand_item = st.session_state.item
 
 st.session_state.play = 0 ######
 if st.button("START"):
@@ -21,6 +23,7 @@ if st.button("START"):
 
     if user_input.lower() == str(rand_item):
       st.write("You entered the correct word!")
+      del st.session_state['item']
     else:
       st.write("Incorrect word. Please try again or get a hint.")
       st.write("\n")

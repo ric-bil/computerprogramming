@@ -2,11 +2,6 @@ import random
 from PIL import Image
 import streamlit as st
 
-items = ['to_eat', 'to_read', 'tree', 'apple']
-rand_item = random.choice(items)
-
-st.button(label='START', on_click=playGame)
-
 def playGame():
 
   st.write('IMMAGINE ' + rand_item)
@@ -27,3 +22,9 @@ def playGame():
       st.write("\n")
       #    option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
       #st.button(label='PLAY AGAIN')
+      
+      
+items = ['to_eat', 'to_read', 'tree', 'apple']
+rand_item = random.choice(items)
+st.button(label='START', on_click=playGame)
+

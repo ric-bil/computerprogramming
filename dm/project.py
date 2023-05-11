@@ -15,3 +15,4 @@ if st.button(label='START'):
   
   if user_input:
     st.write(user_input)
+    st.button(label='PLAY AGAIN')

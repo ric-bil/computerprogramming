@@ -13,8 +13,9 @@ st.write(rand_item)
   
 user_input = st.text_input("Enter the word")
 
-if user_input:
+if user_input:	
   st.write(user_input)
+
 	if user_input.lower() == str(rand_item):
 	  st.write("You entered the correct word!")
 	else:

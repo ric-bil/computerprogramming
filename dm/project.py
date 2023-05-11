@@ -15,7 +15,9 @@ else:
   rand_item = st.session_state.item
   st.write("HO: " + rand_item)
   
-st.session_state.playing = 0 ######
+if 'playing' not in st.session_state:
+  st.session_state.playing = True
+
 if st.button("START"):
   st.write('IMAGE ' + rand_item)
   #picture = "images/" + rand_item + '.jpg'

@@ -21,10 +21,11 @@ if user_input:
     st.write("Incorrect word. Please try again or get a hint.")
     st.write("\n")
     st.write("\n")
-    st.button("TRY AGAIN")
+    clicked = st.button("TRY AGAIN")
       #    option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
       #st.button(label='PLAY AGAIN')
-      
+    if clicked:
+      st.stop()
       
 
 

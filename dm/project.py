@@ -6,9 +6,10 @@ items = ['to_eat', 'to_read', 'tree', 'apple']
 if 'item' not in st.session_state:
     rand_item = random.choice(items)
     st.session_state.item = rand_item
+    st.write("SCELGO: " + rand_item)
 else:
   rand_item = st.session_state.item
-
+  st.write("HO: " + rand_item)
 st.session_state.play = 0 ######
 if st.button("START"):
   st.write('IMMAGINE ' + rand_item)
@@ -18,7 +19,7 @@ if st.button("START"):
  
   user_input = st.text_input("Enter the word")
 
-  if user_input:	
+  if user_input:
     st.write(user_input)
 
     if user_input.lower() == str(rand_item):

@@ -13,6 +13,5 @@ if st.button(label='START'):
   
   user_input = st.text_input("Enter the word")
   
-  if user_input:
-    st.write(user_input)
-    st.button(label='PLAY AGAIN')
+  st.write(user_input)
+  st.button(label='PLAY AGAIN')

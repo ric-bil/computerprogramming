@@ -1,3 +1,4 @@
+import random
 import streamlit as st
 
 items = ['to_eat', 'to_read', 'tree', 'apple']

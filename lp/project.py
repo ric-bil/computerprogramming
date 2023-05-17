@@ -50,7 +50,7 @@ if text != False:
         if word.pos == 'PUNCT':
           continue
         duplicate_avoider += 1
-        st.button(word.text, key = duplicate_avoider):
+        st.button(word.text, key = duplicate_avoider)
     else:
       pass
 

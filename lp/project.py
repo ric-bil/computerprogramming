@@ -53,5 +53,5 @@ if text != False:
     else:
       pass
 
-if st.button(word.text, key = duplicate_avoider):
+if st.button(word.text, key = 1):
   st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")

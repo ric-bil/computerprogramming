@@ -3,7 +3,11 @@ import stanza
 from googletrans import Translator
 
 translator = Translator()
-
+if 'clicked' not in st.session_state:
+  st.session_state['clicked'] = '0'
+else:
+  clicked = st.session_state.clicked
+  
 st.title('Translator- Text Analyser')
 st.header('Welcome to the slowest and still malfunctioning text analyser ever!')
 st.write('''This app allows you to translate and then analyse a text in any language, 
@@ -44,8 +48,9 @@ duplicate_avoider = 0
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
-    pressed = st.button(f"Sentence {i+1}: {sentence_text}")
-    if pressed:
+    clicked = st.button(f"Sentence {i+1}: {sentence_text}")
+    st.session_state['clicked'] = clicked
+    if clicked:
       st.write(f"Sentence {i+1}:")
       for word in sent.words:
         if word.pos == 'PUNCT':

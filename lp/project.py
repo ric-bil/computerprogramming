@@ -19,14 +19,14 @@ input_text = st.text_area('Please, insert text here')
 dest_lang = st.text_input('Enter a language here')
 
 if (input_text and dest_lang):
-    try:
-      output_text = translator.translate(input_text, dest=dest_lang)
-      st.write(output_text.text)
-      translated_text = (output_text.text)
-    except ValueError:
-      st.info (f"{dest_lang} is not a valid language!")
-      text = False
-      dest_lang = False
+  try:
+    output_text = translator.translate(input_text, dest=dest_lang)
+    st.write(output_text.text)
+    translated_text = (output_text.text)
+  except ValueError:
+    st.info (f"{dest_lang} is not a valid language!")
+    text = False
+    dest_lang = False
 else:
   st.info ("Oops! Something is missing!")
 
@@ -37,21 +37,20 @@ if (input_text and dest_lang):
     lan_nlp = stanza.Pipeline(f"{dest_lang}", processors = "tokenize, mwt" )
     text = lan_nlp(translated_text)
   except stanza.pipeline.core.UnsupportedProcessorError:
-   st.info ("Sorry, this language is not supported.")
-   text = False
+    st.info ("Sorry, this language is not supported.")
+    text = False
   
 duplicate_avoider = 0
 if text != False:
   for i, sent in enumerate(text.sentences):
     sentence_text = sent.text
     if st.button(f"Sentence {i+1}: {sentence_text}"):
-           st.write(f"Sentence {i+1}:")
-           for word in sent.words:
-            if word.pos == 'PUNCT':
-                    continue
-            duplicate_avoider += 1
-            if st.button(word.text, key = duplicate_avoider):
-                st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
-             
+      st.write(f"Sentence {i+1}:")
+      for word in sent.words:
+        if word.pos == 'PUNCT':
+          continue
+        duplicate_avoider += 1
+        if st.button(word.text, key = duplicate_avoider):
+          st.info(f"Lemma: {word.lemma}; Part of Speech: {word.pos}")
     else:
-        pass
+      pass

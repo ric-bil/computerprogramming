@@ -76,5 +76,6 @@ st.write(good_answer)
 if st.button("Reload app"):
      #for key in st.session_state.keys():
      del st.session_state
+     st.write("Deleting")
      #st.write(st.session_state['item'])
 

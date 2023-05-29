@@ -22,7 +22,7 @@ else:
 
 
 picture = "images/" + rand_item + '.jpg'
-picture = "images/to_read.jpg"
+picture = "to_read.jpg"
 img = Image.open(picture)
 st.image(img, width=300)
 

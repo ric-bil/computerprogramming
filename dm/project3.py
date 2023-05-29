@@ -23,7 +23,7 @@ else:
 
 
 picture = "images/" + rand_item + '.jpg'
-st.write("QUI IMMAGINE DI: " + rand_item)
+st.write("IMAGE OF: " + rand_item)
 #img = Image.open(picture)
 #st.image(img, width=300)
 

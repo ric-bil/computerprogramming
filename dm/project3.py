@@ -22,9 +22,9 @@ else:
 
 
 picture = "images/" + rand_item + '.jpg'
-picture = "to_read.jpg"
-img = Image.open(picture)
-st.image(img, width=300)
+st.write("QUI IMMAGINE DI: " + rand_item)
+#img = Image.open(picture)
+#st.image(img, width=300)
 
 #if st.button(label='START'):
 user_input = st.text_input("Enter the word")

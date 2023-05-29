@@ -9,7 +9,7 @@ st.write("\n")
 st.header("What do you see on the picture below?")
 st.write("\n")
 st.write("\n")
-
+good_answer = False
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
 if 'item' not in st.session_state:

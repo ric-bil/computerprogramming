@@ -19,6 +19,7 @@ if 'item' not in st.session_state:
     st.write('Item set to ' + rand_item)
 else:
     rand_item = st.session_state.item
+    st.write('Item still set to' + rand_item)
 
 
 picture = "images/" + rand_item + '.jpg'

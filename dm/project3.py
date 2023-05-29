@@ -72,7 +72,7 @@ if user_input:
                           else:
                             st.write("Incorrect again. The word was: ", rand_item) 
                         
-st.write("Good Answer " + good_answer)
+st.write(good_answer)
 if st.button("Reload app"):
      #for key in st.session_state.keys():
      del st.session_state

@@ -19,7 +19,7 @@ if 'item' not in st.session_state:
     st.write('Item set to ' + rand_item)
 else:
     rand_item = st.session_state.item
-    st.write('Item still set to' + rand_item)
+    st.write('Item still set to ' + rand_item)
 
 
 picture = "images/" + rand_item + '.jpg'
@@ -34,6 +34,7 @@ if user_input:
     st.write("You entered:",user_input)
     if user_input.lower() == str(rand_item):
         st.write("You entered the correct word!")
+        good_answer = True
     else:
         st.write("Unfortunately ths is incorrect. Please try again or get a hint below.")
         st.write("\n")
@@ -59,6 +60,7 @@ if user_input:
                     st.write("You entered:",user_input2)
                     if user_input2.lower() == str(rand_item):
                         st.write("Super! Now you entered the correct word!")
+                        good_answer = True
                     else:
                         st.write("Incorrect again. The word starts with", rand_item[0])
                         user_input3 = st.text_input("Last chance, enter the word")
@@ -66,15 +68,11 @@ if user_input:
                           st.write("You entered:",user_input3)
                           if user_input3.lower() == str(rand_item):
                                         st.write("Super! Now you entered the correct word!")
+                                        good_answer = True
                           else:
                             st.write("Incorrect again. The word was: ", rand_item) 
                         
-                        
-                        
-else:
-    #st.write("Please enter a word.")
-    pass
-
+st.write("Good Answer " + good_answer)
 if st.button("Reload app"):
      #for key in st.session_state.keys():
      del st.session_state

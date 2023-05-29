@@ -9,7 +9,6 @@ st.write("\n")
 st.header("What do you see on the picture below?")
 st.write("\n")
 st.write("\n")
-good_answer = False
 
 items = ['to_eat', 'to_read', 'tree', 'apple']
 if 'item' not in st.session_state:
@@ -34,7 +33,6 @@ if user_input:
     st.write("You entered:",user_input)
     if user_input.lower() == str(rand_item):
         st.write("You entered the correct word!")
-        good_answer = True
     else:
         st.write("Unfortunately ths is incorrect. Please try again or get a hint below.")
         st.write("\n")
@@ -60,7 +58,6 @@ if user_input:
                     st.write("You entered:",user_input2)
                     if user_input2.lower() == str(rand_item):
                         st.write("Super! Now you entered the correct word!")
-                        good_answer = True
                     else:
                         st.write("Incorrect again. The word starts with", rand_item[0])
                         user_input3 = st.text_input("Last chance, enter the word")
@@ -72,8 +69,11 @@ if user_input:
                           else:
                             st.write("Incorrect again. The word was: ", rand_item) 
                         
-st.write(good_answer)
 if st.button("Reload app"):
+     user_input = None
+     option = None
+     key = None
+     user_input2 = None
      #for key in st.session_state.keys():
      del st.session_state['item']
      #st.write("Deleting")

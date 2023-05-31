@@ -4,18 +4,13 @@ import pyttsx3
 import language_tool_python
 from gtts import gTTS
 
- 
-
 def correct_german_text(text):
     #parser = GingerIt()
     #corrected = parser.parse(text)['result']
     #return corrected
     tool = language_tool_python.LanguageToolPublicAPI('de-DE')
     return tool.correct(text)
-
-
- 
-
+  
 def speak_german_text(mytext):
     tts1=gTTS(text="Der Tisch ist neu", lang="de")
     tts1.save('file.mp3')
@@ -27,8 +22,6 @@ def speak_german_text(mytext):
     #engine.say(text)
     #engine.say("Der Tisch ist gelb")
     #engine.runAndWait()
-
- 
 
 def main():
     st.title("Deutscher Textkorrektor")
@@ -44,8 +37,6 @@ def main():
                 st.write(corrected_text)
                 st.subheader("Hören Sie sich die richtige deutsche Aussprache an:")
                 st.button("Aussprache abspielen", on_click=lambda: speak_german_text(corrected_text))
-
- 
 
 if __name__ == "__main__":
     main()

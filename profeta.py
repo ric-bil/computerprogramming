@@ -26,8 +26,8 @@ def main():
         st.success("Korrigierter Text:")
         st.write(corrected_text)
         st.subheader("Hören Sie sich die richtige deutsche Aussprache an:")
-        st.button("Aussprache abspielen", on_click=lambda: speak_german_text(corrected_text))
-        st.audio(data=speak_german_text(mytext), format="audio/mp3", start_time=0)
+        st.button("Aussprache abspielen") #, on_click=lambda: speak_german_text(corrected_text))
+        st.audio(data=speak_german_text(corrected_text), format="audio/mp3", start_time=0)
 
 if __name__ == "__main__":
   main()

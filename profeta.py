@@ -10,7 +10,8 @@ def speak_german_text(mytext):
   tts1=gTTS(text=mytext, lang="de")
   tts1.save('file.mp3')
   audio_file = open("file.mp3", "rb")
-  st.audio(data=audio_file, format="audio/mp3", start_time=0)
+  return audio_file
+  #st.audio(data=audio_file, format="audio/mp3", start_time=0)
 
 def main():
   st.title("Deutscher Textkorrektor")
@@ -26,6 +27,7 @@ def main():
         st.write(corrected_text)
         st.subheader("Hören Sie sich die richtige deutsche Aussprache an:")
         st.button("Aussprache abspielen", on_click=lambda: speak_german_text(corrected_text))
+        st.audio(data=speak_german_text(mytext), format="audio/mp3", start_time=0)
 
 if __name__ == "__main__":
   main()

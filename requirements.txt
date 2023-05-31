@@ -1,0 +1,5 @@
+requests
+GingerIt
+pyttsx3
+language_tool_python
+gTTS

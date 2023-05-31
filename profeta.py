@@ -1,18 +1,13 @@
 import streamlit as st
-from gingerit.gingerit import GingerIt
-import pyttsx3
 import language_tool_python
 from gtts import gTTS
 
 def correct_german_text(text):
-  #parser = GingerIt()
-  #corrected = parser.parse(text)['result']
-  #return corrected
   tool = language_tool_python.LanguageToolPublicAPI('de-DE')
   return tool.correct(text)
   
 def speak_german_text(mytext):
-  tts1=gTTS(text="Der Tisch ist neu", lang="de")
+  tts1=gTTS(text=mytext, lang="de")
   tts1.save('file.mp3')
   audio_file = open("file.mp3", "rb")
   st.audio(data=audio_file, format="audio/mp3", start_time=0)

@@ -27,7 +27,7 @@ if st.session_state.page == 0:
     st.header("What do you see on the picture below?")
     st.write("\n")
     st.write("\n")
-  st.session_state.user_input = st.text_input("Enter the word")
+  #st.session_state.user_input = st.text_input("Enter the word")
   picture = "images/" + st.session_state.rand_item + '.jpg'
   st.write("IMAGE OF: " + st.session_state.rand_item)
   #img = Image.open(picture)

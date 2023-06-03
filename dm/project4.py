@@ -21,13 +21,13 @@ if st.session_state.page == 0:
   else:
     rand_item = st.session_state.item
     # Replace the placeholder with some text:
-  with placeholder:
+  with placeholder.container():
     st.title("WELCOME TO YOUR APHASIA APP!")
     st.write("\n")
     st.header("What do you see on the picture below?")
     st.write("\n")
     st.write("\n")
-  #st.session_state.user_input = st.text_input("Enter the word")
+    st.session_state.user_input = st.text_input("Enter the word")
   picture = "images/" + st.session_state.rand_item + '.jpg'
   st.write("IMAGE OF: " + st.session_state.rand_item)
   #img = Image.open(picture)
@@ -38,7 +38,7 @@ elif st.session_state.page == 1:
     if st.session_state.user_input.lower() == str(st.session_state.rand_item):
       placeholder.write("You entered the correct word!")
     else:
-      with placeholder:
+      with placeholder.container():
         st.write("Unfortunately ths is incorrect. Please try again or get a hint below.")
         st.write("\n")
         st.write("\n")

@@ -1,4 +1,5 @@
 import streamlit as st
+import random
 
 if "page" not in st.session_state:
     st.session_state.page = 0

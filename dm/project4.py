@@ -30,12 +30,16 @@ if st.session_state.page == 0:
   #img = Image.open(picture)
   #st.image(img, width=300)
 
-    
-    
-    
 elif st.session_state.page == 1:
-    # Replace the text with a chart:
-    placeholder.line_chart({"data": [1, 5, 2, 6]})
+  if user_input:
+    if user_input.lower() == str(rand_item):
+      placeholder.write("You entered the correct word!")
+    else:
+      with placeholder:
+        st.write("Unfortunately ths is incorrect. Please try again or get a hint below.")
+        st.write("\n")
+        st.write("\n")
+        option = st.selectbox("Choose one for help", ["None selected. Select your hint", "It is another word for", "It sounds like", "Similar in meaning to", "It rhymes with"])
 
 elif st.session_state.page == 2:
 # Replace the chart with several elements:

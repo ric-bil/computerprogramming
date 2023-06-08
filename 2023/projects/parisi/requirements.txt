@@ -1,0 +1,2 @@
+googletrans==3.1.0a0
+stanza>=1.2.0,<1.6.0

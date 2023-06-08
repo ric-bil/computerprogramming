@@ -1,0 +1,12 @@
+## install libraries for the microcontroller
+pimoroni
+python3-explorerhat
+
+## install Speech Recognition library
+SpeechRecognition
+
+## install text to speech library and pyaudio to detect the microphone in real time
+pyttsx3
+pyaudio
+libportaudio0 libportaudio2 libportaudiocpp0 portaudio19-dev flac
+espeak ffmpeg libespeak1
